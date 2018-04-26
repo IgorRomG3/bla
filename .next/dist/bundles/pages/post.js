@@ -954,28 +954,32 @@ var post_Post = function Post(props) {
 
 post_Post.getInitialProps = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regenerator__default.a.mark(function _callee(context) {
-    var PORT, route, res2, posts, data, res3, template, res4, array;
+    var route, port, PORT, res2, posts, data, res3, template, res4, array;
     return regenerator__default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            PORT = process.env.PORT || 3000;
-
-            console.log(PORT, 'from fetch index');
-
             route = context.query.route;
 
             console.log(context.query);
 
-            _context.next = 6;
+            port = context.query.port;
+
+            console.log(port, 'port');
+
+            PORT = process.env.PORT || 3000;
+
+            console.log(PORT, 'from fetch post');
+
+            _context.next = 8;
             return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/test-data.json');
 
-          case 6:
+          case 8:
             res2 = _context.sent;
-            _context.next = 9;
+            _context.next = 11;
             return res2.json();
 
-          case 9:
+          case 11:
             posts = _context.sent;
 
             console.log(posts);
@@ -984,29 +988,29 @@ post_Post.getInitialProps = function () {
 
             console.log(data.id);
 
-            _context.next = 15;
+            _context.next = 17;
             return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/templates/' + data.templateUrl);
 
-          case 15:
+          case 17:
             res3 = _context.sent;
-            _context.next = 18;
+            _context.next = 20;
             return res3.text();
 
-          case 18:
+          case 20:
             template = _context.sent;
-            _context.next = 21;
+            _context.next = 23;
             return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/blog-single.json');
 
-          case 21:
+          case 23:
             res4 = _context.sent;
-            _context.next = 24;
+            _context.next = 26;
             return res4.json();
 
-          case 24:
+          case 26:
             array = _context.sent;
             return _context.abrupt('return', { data: data, template: template, array: array });
 
-          case 26:
+          case 28:
           case 'end':
             return _context.stop();
         }

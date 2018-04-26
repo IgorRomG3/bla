@@ -6,16 +6,15 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 const PORT = process.env.PORT || 3000
 
-module.exports.port = PORT;
-
 app.prepare()
 .then(() => {
   const server = express()
 
   server.get('/:route', (req, res) => {
     const actualPage = '/post'
-    const queryParams = { route: req.params.route } 
-    app.render(req, res, actualPage, queryParams, port)
+    const port = PORT;
+    const queryParams = { route: req.params.route, port: port } 
+    app.render(req, res, actualPage, queryParams)
   })
 
   server.get('*', (req, res) => {
