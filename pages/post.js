@@ -6,6 +6,8 @@ import Title from '../components/Title';
 import Head from 'next/head';
 import Content from '../components/Content';
 import Next from '../components/Next';
+const express = require('express')
+const next = require('next')
 
 const Post =  (props) => (
   <div>

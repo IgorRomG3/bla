@@ -7,6 +7,8 @@ import BlogList from '../components/BlogList';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import fetch from 'isomorphic-unfetch';
+const express = require('express')
+const next = require('next')
 
 export default class Blog extends React.Component {
 
