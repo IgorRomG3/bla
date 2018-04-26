@@ -7,8 +7,6 @@ import BlogList from '../components/BlogList';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 import fetch from 'isomorphic-unfetch';
-const express = require('express')
-const next = require('next')
 
 export default class Blog extends React.Component {
 
@@ -63,13 +61,13 @@ export default class Blog extends React.Component {
 
 Blog.getInitialProps = async function() {
     const PORT = process.env.PORT || 3000
-    const res = await fetch(`${PORT}/static/data/h1.json`)
+    const res = await fetch(`http://demo.igorromanenko.name/data/h1.json`)
     const h1 = await res.json()
 
-    const res2 = await fetch(`${PORT}/static/data/blog-single.json`)
+    const res2 = await fetch(`http://demo.igorromanenko.name/data/blog-single.json`)
     const posts = await res2.json()
 
-    const res3 = await fetch(`${PORT}/static/data/blog-categories.json`)
+    const res3 = await fetch(`http://demo.igorromanenko.name/data/blog-categories.json`)
     const cat = await res3.json()
   
     return {
