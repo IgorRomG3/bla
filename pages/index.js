@@ -60,13 +60,14 @@ export default class Blog extends React.Component {
 }
 
 Blog.getInitialProps = async function() {
-    const res = await fetch('http://localhost:3000/static/data/h1.json')
+    const PORT = process.env.PORT || 3000
+    const res = await fetch(`${PORT}/static/data/h1.json`)
     const h1 = await res.json()
 
-    const res2 = await fetch('http://localhost:3000/static/data/blog-single.json')
+    const res2 = await fetch(`${PORT}/static/data/blog-single.json`)
     const posts = await res2.json()
 
-    const res3 = await fetch('http://localhost:3000/static/data/blog-categories.json')
+    const res3 = await fetch(`${PORT}/static/data/blog-categories.json`)
     const cat = await res3.json()
   
     return {

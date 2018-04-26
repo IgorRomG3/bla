@@ -31,18 +31,19 @@ const Post =  (props) => (
 Post.getInitialProps = async function(context) {
   const route = context.query.route;
   console.log(context.query);
+  const PORT = process.env.PORT || 3000
 
-  const res2 = await fetch('http://localhost:3000/static/data/test-data.json')
+  const res2 = await fetch(`${PORT}/static/data/test-data.json`)
   const posts = await res2.json()
   console.log(posts);
 
   const data = posts[route];
   console.log(data.id);
 
-  const res3 = await fetch(`http://localhost:3000/static/templates/${data.templateUrl}`)
+  const res3 = await fetch(`${PORT}/static/templates/${data.templateUrl}`)
   const template = await res3.text()
 
-  const res4 = await fetch(`http://localhost:3000/static/data/blog-single.json`)
+  const res4 = await fetch(`${PORT}/static/data/blog-single.json`)
   const array = await res4.json()
 
 
