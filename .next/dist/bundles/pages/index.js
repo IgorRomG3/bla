@@ -860,36 +860,38 @@ pages_Blog.getInitialProps = _asyncToGenerator( /*#__PURE__*/regenerator__defaul
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          PORT = process.env.PORT;
-          _context.next = 3;
+          PORT = process.env.PORT || 3000;
+
+          console.log(PORT, 'from fetch index');
+          _context.next = 4;
           return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/h1.json');
 
-        case 3:
+        case 4:
           res = _context.sent;
-          _context.next = 6;
+          _context.next = 7;
           return res.json();
 
-        case 6:
+        case 7:
           h1 = _context.sent;
-          _context.next = 9;
+          _context.next = 10;
           return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/blog-single.json');
 
-        case 9:
+        case 10:
           res2 = _context.sent;
-          _context.next = 12;
+          _context.next = 13;
           return res2.json();
 
-        case 12:
+        case 13:
           posts = _context.sent;
-          _context.next = 15;
+          _context.next = 16;
           return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/blog-categories.json');
 
-        case 15:
+        case 16:
           res3 = _context.sent;
-          _context.next = 18;
+          _context.next = 19;
           return res3.json();
 
-        case 18:
+        case 19:
           cat = _context.sent;
           return _context.abrupt('return', {
             title: h1,
@@ -897,7 +899,7 @@ pages_Blog.getInitialProps = _asyncToGenerator( /*#__PURE__*/regenerator__defaul
             c: cat
           });
 
-        case 20:
+        case 21:
         case 'end':
           return _context.stop();
       }

@@ -954,24 +954,28 @@ var post_Post = function Post(props) {
 
 post_Post.getInitialProps = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regenerator__default.a.mark(function _callee(context) {
-    var route, PORT, res2, posts, data, res3, template, res4, array;
+    var PORT, route, res2, posts, data, res3, template, res4, array;
     return regenerator__default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
+            PORT = process.env.PORT || 3000;
+
+            console.log(PORT, 'from fetch index');
+
             route = context.query.route;
 
             console.log(context.query);
-            PORT = process.env.PORT;
-            _context.next = 5;
+
+            _context.next = 6;
             return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/test-data.json');
 
-          case 5:
+          case 6:
             res2 = _context.sent;
-            _context.next = 8;
+            _context.next = 9;
             return res2.json();
 
-          case 8:
+          case 9:
             posts = _context.sent;
 
             console.log(posts);
@@ -980,29 +984,29 @@ post_Post.getInitialProps = function () {
 
             console.log(data.id);
 
-            _context.next = 14;
+            _context.next = 15;
             return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/templates/' + data.templateUrl);
 
-          case 14:
+          case 15:
             res3 = _context.sent;
-            _context.next = 17;
+            _context.next = 18;
             return res3.text();
 
-          case 17:
+          case 18:
             template = _context.sent;
-            _context.next = 20;
+            _context.next = 21;
             return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/blog-single.json');
 
-          case 20:
+          case 21:
             res4 = _context.sent;
-            _context.next = 23;
+            _context.next = 24;
             return res4.json();
 
-          case 23:
+          case 24:
             array = _context.sent;
             return _context.abrupt('return', { data: data, template: template, array: array });
 
-          case 25:
+          case 26:
           case 'end':
             return _context.stop();
         }

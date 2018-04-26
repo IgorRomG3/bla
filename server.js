@@ -6,6 +6,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 const PORT = process.env.PORT || 3000
 
+module.exports.port = PORT;
+
 app.prepare()
 .then(() => {
   const server = express()
@@ -13,7 +15,7 @@ app.prepare()
   server.get('/:route', (req, res) => {
     const actualPage = '/post'
     const queryParams = { route: req.params.route } 
-    app.render(req, res, actualPage, queryParams)
+    app.render(req, res, actualPage, queryParams, port)
   })
 
   server.get('*', (req, res) => {
