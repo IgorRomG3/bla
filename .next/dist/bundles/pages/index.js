@@ -860,38 +860,36 @@ pages_Blog.getInitialProps = _asyncToGenerator( /*#__PURE__*/regenerator__defaul
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          PORT = process.env.PORT || 3000;
+          PORT = process.env.PORT;
+          _context.next = 3;
+          return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/h1.json');
 
-          console.log(PORT);
-          _context.next = 4;
-          return external__isomorphic_unfetch__default()('http://localhost:3000/static/data/h1.json');
-
-        case 4:
+        case 3:
           res = _context.sent;
-          _context.next = 7;
+          _context.next = 6;
           return res.json();
 
-        case 7:
+        case 6:
           h1 = _context.sent;
-          _context.next = 10;
-          return external__isomorphic_unfetch__default()('http://localhost:3000/static/data/blog-single.json');
+          _context.next = 9;
+          return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/blog-single.json');
 
-        case 10:
+        case 9:
           res2 = _context.sent;
-          _context.next = 13;
+          _context.next = 12;
           return res2.json();
 
-        case 13:
+        case 12:
           posts = _context.sent;
-          _context.next = 16;
-          return external__isomorphic_unfetch__default()('http://localhost:3000/static/data/blog-categories.json');
+          _context.next = 15;
+          return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/blog-categories.json');
 
-        case 16:
+        case 15:
           res3 = _context.sent;
-          _context.next = 19;
+          _context.next = 18;
           return res3.json();
 
-        case 19:
+        case 18:
           cat = _context.sent;
           return _context.abrupt('return', {
             title: h1,
@@ -899,7 +897,7 @@ pages_Blog.getInitialProps = _asyncToGenerator( /*#__PURE__*/regenerator__defaul
             c: cat
           });
 
-        case 21:
+        case 20:
         case 'end':
           return _context.stop();
       }

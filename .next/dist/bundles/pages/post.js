@@ -954,7 +954,7 @@ var post_Post = function Post(props) {
 
 post_Post.getInitialProps = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regenerator__default.a.mark(function _callee(context) {
-    var route, res2, posts, data, res3, template, res4, array;
+    var route, PORT, res2, posts, data, res3, template, res4, array;
     return regenerator__default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -962,16 +962,16 @@ post_Post.getInitialProps = function () {
             route = context.query.route;
 
             console.log(context.query);
+            PORT = process.env.PORT;
+            _context.next = 5;
+            return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/test-data.json');
 
-            _context.next = 4;
-            return external__isomorphic_unfetch__default()('http://localhost:3000/static/data/test-data.json');
-
-          case 4:
+          case 5:
             res2 = _context.sent;
-            _context.next = 7;
+            _context.next = 8;
             return res2.json();
 
-          case 7:
+          case 8:
             posts = _context.sent;
 
             console.log(posts);
@@ -980,29 +980,29 @@ post_Post.getInitialProps = function () {
 
             console.log(data.id);
 
-            _context.next = 13;
-            return external__isomorphic_unfetch__default()('http://localhost:3000/static/templates/' + data.templateUrl);
+            _context.next = 14;
+            return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/templates/' + data.templateUrl);
 
-          case 13:
+          case 14:
             res3 = _context.sent;
-            _context.next = 16;
+            _context.next = 17;
             return res3.text();
 
-          case 16:
+          case 17:
             template = _context.sent;
-            _context.next = 19;
-            return external__isomorphic_unfetch__default()('http://localhost:3000/static/data/blog-single.json');
+            _context.next = 20;
+            return external__isomorphic_unfetch__default()('http://localhost:' + PORT + '/static/data/blog-single.json');
 
-          case 19:
+          case 20:
             res4 = _context.sent;
-            _context.next = 22;
+            _context.next = 23;
             return res4.json();
 
-          case 22:
+          case 23:
             array = _context.sent;
             return _context.abrupt('return', { data: data, template: template, array: array });
 
-          case 24:
+          case 25:
           case 'end':
             return _context.stop();
         }

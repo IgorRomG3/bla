@@ -60,14 +60,13 @@ export default class Blog extends React.Component {
 }
 
 Blog.getInitialProps = async function() {
-    const PORT = process.env.PORT
-    const res = await fetch(`http://localhost:${PORT}/static/data/h1.json`)
+    const res = await fetch('https://salty-ridge-45524.herokuapp.com/static/data/h1.json')
     const h1 = await res.json()
 
-    const res2 = await fetch(`http://localhost:${PORT}/static/data/blog-single.json`)
+    const res2 = await fetch('https://salty-ridge-45524.herokuapp.com/static/data/blog-single.json')
     const posts = await res2.json()
 
-    const res3 = await fetch(`http://localhost:${PORT}/static/data/blog-categories.json`)
+    const res3 = await fetch('https://salty-ridge-45524.herokuapp.com/static/data/blog-categories.json')
     const cat = await res3.json()
   
     return {
