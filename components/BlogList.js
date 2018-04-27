@@ -6,7 +6,10 @@ import {TweenLite, Power4} from 'gsap';
 export default class BlogList extends React.Component {
 
   componentDidMount() {
-     //Анимация меню, категорий и лого в меню
+
+          var body = document.body;
+          body.classList ? body.classList.add('withJs') : body.className += ' withJs';
+          //Анимация меню, категорий и лого в меню
 
           var back = $('.back_link'),
               logo = $('header .logo svg path'),

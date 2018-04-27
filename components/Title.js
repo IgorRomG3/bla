@@ -130,6 +130,10 @@ export default class Title extends React.Component {
       }
   }
 
+  componentDidUpdate() {
+    window.onbeforeunload = function(){ window.scrollTo(0,0); }
+  }
+
   goBack() {
     window.history.back();
   }

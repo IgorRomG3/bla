@@ -91,7 +91,7 @@ export default class Content extends React.Component {
     return(
       <section className="content">
         <div className="content-fake-bg"></div>
-        <div id="content" dangerouslySetInnerHTML={{__html: this.props.templateUrl}} />>
+        <div id="content" dangerouslySetInnerHTML={{__html: this.props.templateUrl}} />
         <div className="container content-text">
           <Subscribe />
         </div>

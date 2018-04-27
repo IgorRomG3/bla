@@ -10,10 +10,6 @@ import fetch from 'isomorphic-unfetch';
 
 export default class Blog extends React.Component {
 
-  componentDidUpdate() {
-    window.onbeforeunload = function(){ window.scrollTo(0,0); }
-  }
-
   render() {
     return(
         <div>
