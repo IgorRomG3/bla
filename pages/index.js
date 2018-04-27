@@ -63,19 +63,10 @@ Blog.getInitialProps = async function() {
     const PORT = process.env.PORT;
     console.log(PORT, 'from fetch index');
 
-    let h1Data,
-        singleData,
-        categoriesData;
+    const h1Data = '../static/data/h1.json';
+    const singleData = '../static/data/blog-single.json';
+    const categoriesData = '../static/data/blog-categories.json';
 
-    if(PORT !== undefined) {
-      h1Data = `http://localhost:${PORT}/static/data/h1.json`;
-      singleData = `http://localhost:${PORT}/static/data/blog-single.json`;
-      categoriesData = `http://localhost:${PORT}/static/data/blog-categories.json`;
-    }else {
-      h1Data = '../static/data/h1.json';
-      singleData = '../static/data/blog-single.json';
-      categoriesData = '../static/data/blog-categories.json';
-    }  
     const res = await fetch(h1Data)
     const h1 = await res.json()
 
