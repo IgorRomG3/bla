@@ -72,7 +72,6 @@ export default class BlogList extends React.Component {
                   TweenLite.to($(this).find('.news-fake-bg'), .5, {bottom: '100%', ease: Power4.easeOut, delay: 0.8 + i/5});
               }
           });
-        });
 
         $(window).scroll(function(){
 
@@ -95,6 +94,7 @@ export default class BlogList extends React.Component {
               }
           });
         });
+      });
 
         //Логика работы категорий
         $(document).ready(function() {
