@@ -52,8 +52,6 @@ export default class Blog extends React.Component {
       		</div>
       	</main>
         <Footer />
-        <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-        <script src="../static/js/yandeks_map.js" charset="utf-8"></script>
       </div>
     )
   }
@@ -61,7 +59,7 @@ export default class Blog extends React.Component {
 
 Blog.getInitialProps = async function() {
     const PORT = process.env.PORT;
-    console.log(PORT, 'from fetch index');
+    // console.log(PORT, 'from fetch index');
 
     let h1Data,
         singleData,

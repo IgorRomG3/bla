@@ -23,18 +23,16 @@ const Post =  (props) => (
     <Content templateUrl={props.template} />
     <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />
     <Footer />
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
-    <script src="../static/js/yandeks_map.js" charset="utf-8"></script>
   </div>  
 )
 
 Post.getInitialProps = async function(context) {
 
   const route = context.query.route;
-  console.log(context.query);
+  // console.log(context.query);
 
   const port = context.query.port;
-  console.log(port, 'port');
+  // console.log(port, 'port');
 
   let testData,
       single,
@@ -50,10 +48,10 @@ Post.getInitialProps = async function(context) {
 
   const res2 = await fetch(testData)
   const posts = await res2.json()
-  console.log(posts);
+  // console.log(posts);
 
   const data = posts[route];
-  console.log(data.id);
+  // console.log(data.id);
 
   if(port !== undefined) {
      tmlt = `http://localhost:${port}/static/templates/${data.templateUrl}`;
