@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
             <link rel="stylesheet" href="../static/css/fontsblog.css" />
             <link rel="stylesheet" href="../static/css/blog/bootstrap-reboot.min.css" />
             <link rel="stylesheet" href="../static/css/blog/main.css" />
+            <title>Блог</title>
         </Head>
         <body>
           <Main />

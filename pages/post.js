@@ -9,9 +9,6 @@ import Next from '../components/Next';
 
 const Post =  (props) => (
   <div>
-    <Head>
-      <title>{props.title}</title>
-    </Head>  
     <Title data={props.data} />
     <Content templateUrl={props.template} />
     <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />
