@@ -36,7 +36,7 @@ Post.getInitialProps = async function(context) {
   const port = context.query.port;
   console.log(port, 'port');
 
-  let testData,
+  var testData,
       singleData,
       tmlt;
 
