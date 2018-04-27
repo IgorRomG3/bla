@@ -36,17 +36,23 @@ Post.getInitialProps = async function(context) {
   const port = context.query.port;
   console.log(port, 'port');
 
-  const res2 = await fetch(`http://localhost:${port}/static/data/test-data.json`)
+  const testData = `http://localhost:${port}/static/data/test-data.json` || '../static/data/test-data.json';
+
+  const tmlt = `http://localhost:${port}/static/templates/${data.templateUrl}` || `../static/templates/${data.templateUrl}`;
+
+  const single = `http://localhost:${port}/static/data/blog-single.json` || `../static/data/blog-single.json`;
+
+  const res2 = await fetch(testData)
   const posts = await res2.json()
   console.log(posts);
 
   const data = posts[route];
   console.log(data.id);
 
-  const res3 = await fetch(`http://localhost:${port}/static/templates/${data.templateUrl}`)
+  const res3 = await fetch(tmlt)
   const template = await res3.text()
 
-  const res4 = await fetch(`http://localhost:${port}/static/data/blog-single.json`)
+  const res4 = await fetch(single)
   const array = await res4.json()
 
 
