@@ -63,7 +63,7 @@ Blog.getInitialProps = async function() {
     const PORT = process.env.PORT;
     console.log(PORT, 'from fetch index');
 
-    var h1Data,
+    let h1Data,
         singleData,
         categoriesData;
 
