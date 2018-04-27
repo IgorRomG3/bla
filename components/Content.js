@@ -79,14 +79,6 @@ export default class Content extends React.Component {
     	});
   }
 
-  // componentDidUpdate() {
-  //   fetch(this.props.templateUrl).then((resp)=>{ return resp.text() }).then((text)=>{
-  //     $('#content').html(text);
-
-  //     window.onbeforeunload = function(){ window.scrollTo(0,0); }
-  //   });
-  // }
-
   render() {
     return(
       <section className="content">

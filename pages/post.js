@@ -15,7 +15,6 @@ const Post =  (props) => (
     <Title data={props.data} />
     <Content templateUrl={props.template} />
     <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />
-    <Footer />
   </div>  
 )
 
