@@ -61,7 +61,7 @@ Post.getInitialProps = async function(context) {
      tmlt = `https://salty-ridge-45524.herokuapp.com/static/templates/${data.templateUrl}`;
     //  if(tmlt ==undefined) {
     //   tmlt = `https://salty-ridge-45524.herokuapp.com/static/templates/${data.templateUrl}`;
-     }
+    //  }
   }else {
      tmlt = `../static/templates/${data.templateUrl}`;
   }
