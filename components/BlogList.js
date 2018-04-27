@@ -72,6 +72,7 @@ export default class BlogList extends React.Component {
                   TweenLite.to($(this).find('.news-fake-bg'), .5, {bottom: '100%', ease: Power4.easeOut, delay: 0.8 + i/5});
               }
           });
+        });
 
         $(window).scroll(function(){
 
@@ -94,37 +95,6 @@ export default class BlogList extends React.Component {
               }
           });
         });
-      });
-
-        //Логика работы категорий
-        $(document).ready(function() {
-          var categoriesItem = $('.categories .categories-item'),
-          firstCategoryItem = $('.categories .categories-item:first-child > div'),
-          newsItem = $('.news-item');
-
-          firstCategoryItem.addClass('active-line');
-
-          categoriesItem.click(function() {
-              var self = $(this);
-
-              categoriesItem.each(function() {
-              $(this).find('div').removeClass('active-line ');
-              });
-
-              $(this).find('div').addClass('active-line ');
-
-              newsItem.each(function() {
-              if($(this).attr('data-category') === self.attr('data-category')) {
-                  $(this).css('display', 'block');
-              }else if(self.attr('data-category') === "Все") {
-                  $(this).css('display', 'block');
-              }else {
-                  $(this).css('display', 'none');
-              }
-              });
-
-          });
-        })
   }
   
   render() {
