@@ -49,9 +49,9 @@ Blog.getInitialProps = async function() {
         categoriesData;
 
     if(PORT !== undefined) {
-      h1Data = `https://salty-ridge-45524.herokuapp.com/static/data/h1.json`;
-      singleData = `https://salty-ridge-45524.herokuapp.com/static/data/blog-single.json`;
-      categoriesData = `https://salty-ridge-45524.herokuapp.com/static/data/blog-categories.json`;
+      h1Data = `localhost:${PORT}/static/data/h1.json`;
+      singleData = `localhost:${PORT}/static/data/blog-single.json`;
+      categoriesData = `localhost:${PORT}/static/data/blog-categories.json`;
     }else {
       h1Data = '../static/data/h1.json';
       singleData = '../static/data/blog-single.json';
