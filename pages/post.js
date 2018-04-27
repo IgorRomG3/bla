@@ -23,6 +23,8 @@ const Post =  (props) => (
     <Content templateUrl={props.template} />
     <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />
     <Footer />
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script src="../static/js/yandeks_map.js"></script>
   </div>  
 )
 

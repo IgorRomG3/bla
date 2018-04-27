@@ -52,6 +52,8 @@ export default class Blog extends React.Component {
       		</div>
       	</main>
         <Footer />
+        <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+        <script src="../static/js/yandeks_map.js"></script>
       </div>
     )
   }
