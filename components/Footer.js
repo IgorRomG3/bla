@@ -142,8 +142,8 @@ export default class Footer extends React.Component {
       			</div>
       		</div>
       	</div>
-        <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
         <script src="../static/js/yandeks_map.js"></script>
+        <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
       </div>
     )
   }
