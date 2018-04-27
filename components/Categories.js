@@ -9,16 +9,6 @@ export default class Categories extends React.Component {
     }
   }
 
-  componentDidMount() {
-
-    // fetch('../static/data/blog-categories.json').then((resp)=>{ return resp.json() }).then((data)=>{
-    //   this.setState({data: data});
-    //   const firstCategoryItem = $('.categories .categories-item:first-child > div');
-    //   firstCategoryItem.addClass('active-line');
-    // });
-
-  }
-
   render() {
     return(
       <div className="categories">

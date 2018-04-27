@@ -12,13 +12,13 @@ export default class Content extends React.Component {
 
     		var menu = $('.top_wr');
     		var logo = $('.logo');
-    		// var conPos = $('.content-fake-bg').position().top;
+    		var conPos = $('.content-fake-bg').position().top;
     		var menuPos = $('.top_wr').offset().top;
     		// var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
     		var navPos = $('.form-subscribe').offset().top - 80;
     		var nav = $('.nav');
-    		// var content = $('.content-fake-bg');
-    		// var subscribe = $('.content .subscribe');
+    		var content = $('.content-fake-bg');
+    		var subscribe = $('.content .subscribe');
     		// var subscribePos = $('.content .subscribe').before().position().top;
 
     		if($(this).scrollTop()>menu.height()){
@@ -41,17 +41,17 @@ export default class Content extends React.Component {
     		// }
 
 
-    		// if(menuPos>navPos){
-    		// 	nav.addClass('big');
-    		// 	subscribe.addClass('small');
-    		// 	content.addClass('black');
-    		// 	TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 20)', ease: Expo.easeOut,delay: 0.1});
-    		// }else{
-    		// 	nav.removeClass('big');
-    		// 	subscribe.removeClass('small');
-    		// 	content.removeClass('black');
-    		// 	TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 0)', ease: Expo.easeOut,delay: 0.1});
-    		// }
+    		if(menuPos>navPos){
+    			nav.addClass('big');
+    			subscribe.addClass('small');
+    			content.addClass('black');
+    			TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 20)', ease: Expo.easeOut,delay: 0.1});
+    		}else{
+    			nav.removeClass('big');
+    			subscribe.removeClass('small');
+    			content.removeClass('black');
+    			TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 0)', ease: Expo.easeOut,delay: 0.1});
+    		}
 
     		// Анимация контета секции класса 'content'
     		$('.container').each(function() {
