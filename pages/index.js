@@ -16,7 +16,10 @@ export default class Blog extends React.Component {
 
   render() {
     return(
-        <div>    
+        <div>
+        <Head>
+          <title>Блог</title>
+        </Head>    
         <header className='empty'>
           <Menu containerStyle='changeColor white-bg'
                 logoStyle='black'

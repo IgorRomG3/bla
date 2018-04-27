@@ -17,14 +17,13 @@ export default class MyDocument extends Document {
             <link rel="stylesheet" href="../static/css/fontsblog.css" />
             <link rel="stylesheet" href="../static/css/blog/bootstrap-reboot.min.css" />
             <link rel="stylesheet" href="../static/css/blog/main.css" />
-            <title>Блог</title>
         </Head>
         <body>
           <Main />
+          <NextScript />
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
           <script src="../static/js/yandeks_map.js"></script>
-          <NextScript />
         </body>
       </html>
     )
