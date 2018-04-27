@@ -60,12 +60,13 @@ export default class Blog extends React.Component {
 }
 
 Blog.getInitialProps = async function() {
-    const PORT = process.env.PORT || 3000
+    const PORT = process.env.PORT;
     console.log(PORT, 'from fetch index');
 
     let h1Data,
         singleData,
         categoriesData;
+
     if(PORT !== undefined) {
       h1Data = `http://localhost:${PORT}/static/data/h1.json`;
       singleData = `http://localhost:${PORT}/static/data/blog-single.json`;
