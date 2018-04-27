@@ -36,8 +36,17 @@ Post.getInitialProps = async function(context) {
   const port = context.query.port;
   console.log(port, 'port');
 
-  const  testData = '../static/data/test-data.json';
-  const  single = '../static/data/blog-single.json';
+  let testData,
+      single,
+      tmlt;
+
+  if(port !== undefined) {
+     testData = `http://localhost:${port}/static/data/test-data.json`;
+     single = `http://localhost:${port}/static/data/blog-single.json`;
+  }else {
+     testData = '../static/data/test-data.json';
+     single = '../static/data/blog-single.json';
+  }
 
   const res2 = await fetch(testData)
   const posts = await res2.json()
@@ -46,7 +55,11 @@ Post.getInitialProps = async function(context) {
   const data = posts[route];
   console.log(data.id);
 
-  const tmlt = `../static/templates/${data.templateUrl}`;
+  if(port !== undefined) {
+     tmlt = `http://localhost:${port}/static/templates/${data.templateUrl}`;
+  }else {
+     tmlt = `../static/templates/${data.templateUrl}`;
+  }
 
   const res3 = await fetch(tmlt)
   const template = await res3.text()
