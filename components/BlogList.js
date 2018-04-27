@@ -37,7 +37,7 @@ export default class BlogList extends React.Component {
               var logo = $('.logo');
               var menuPos = $('.top_wr').offset().top;
               var nav = $('.nav');
-              var content = $('.content-fake-bg');
+            //   var content = $('.content-fake-bg');
               var subscribe = $('.content .subscribe');
               if($(this).scrollTop()>menu.height()){
                   menu.addClass('scroll');

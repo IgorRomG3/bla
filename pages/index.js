@@ -59,7 +59,7 @@ export default class Blog extends React.Component {
 
 Blog.getInitialProps = async function() {
     const PORT = process.env.PORT;
-    // console.log(PORT, 'from fetch index');
+    console.log(PORT, 'from fetch index');
 
     let h1Data,
         singleData,

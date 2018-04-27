@@ -29,10 +29,10 @@ const Post =  (props) => (
 Post.getInitialProps = async function(context) {
 
   const route = context.query.route;
-  // console.log(context.query);
+  console.log(context.query, 'query data');
 
   const port = context.query.port;
-  // console.log(port, 'port');
+  console.log(port, 'port');
 
   let testData,
       single,
@@ -48,10 +48,10 @@ Post.getInitialProps = async function(context) {
 
   const res2 = await fetch(testData)
   const posts = await res2.json()
-  // console.log(posts);
+  console.log(posts,'posts data');
 
   const data = posts[route];
-  // console.log(data.id);
+  console.log(data.id, 'data index');
 
   if(port !== undefined) {
      tmlt = `http://localhost:${port}/static/templates/${data.templateUrl}`;
