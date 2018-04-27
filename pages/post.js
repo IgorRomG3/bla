@@ -41,6 +41,10 @@ Post.getInitialProps = async function(context) {
   if(port !== undefined) {
      testData = `http://localhost:${port}/static/data/test-data.json`;
      single = `http://localhost:${port}/static/data/blog-single.json`;
+     if(testData == undefined || single == undefined) {
+      testData = `https://salty-ridge-45524.herokuapp.com/static/data/test-data.json`;
+      single = `https://salty-ridge-45524.herokuapp.com/static/data/blog-single.json`;
+     }
   }else {
      testData = '../static/data/test-data.json';
      single = '../static/data/blog-single.json';
@@ -55,6 +59,9 @@ Post.getInitialProps = async function(context) {
 
   if(port !== undefined) {
      tmlt = `http://localhost:${port}/static/templates/${data.templateUrl}`;
+     if(tmlt ==undefined) {
+      tmlt = `https://salty-ridge-45524.herokuapp.com/static/templates/${data.templateUrl}`;
+     }
   }else {
      tmlt = `../static/templates/${data.templateUrl}`;
   }
