@@ -9,16 +9,6 @@ import Next from '../components/Next';
 
 const Post =  (props) => (
   <div>
-    <Head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <meta name="theme-color" content="#000000" />
-      <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /> 
-      <link rel="stylesheet" href="../static/css/fontsblog.css" />
-      <link rel="stylesheet" href="../static/css/blog/bootstrap-reboot.min.css" />
-      <link rel="stylesheet" href="../static/css/blog/main.css" />
-      <title>Блог</title>
-    </Head>
     <Title data={props.data} />
     <Content templateUrl={props.template} />
     <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />

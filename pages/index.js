@@ -16,22 +16,7 @@ export default class Blog extends React.Component {
 
   render() {
     return(
-        <div>
-          <Head>
-          <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <meta name="theme-color" content="#000000" />
-          <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /> 
-          <link rel="stylesheet" href="../static/css/fontsblog.css" />
-          <link rel="stylesheet" href="../static/css/blog/bootstrap-reboot.min.css" />
-          <link rel="stylesheet" href="../static/css/blog/main.css" />
-          <title>Блог</title>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        </Head>
-          <noscript>
-            You need to enable JavaScript to run this app.
-          </noscript>
-      
+        <div>    
         <header className='empty'>
           <Menu containerStyle='changeColor white-bg'
                 logoStyle='black'
