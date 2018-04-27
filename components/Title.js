@@ -140,7 +140,7 @@ export default class Title extends React.Component {
     		<Menu />
     		<div className="bottom_wr">
     			<div className="left_block">
-    				<a className="back_link">
+    				<a onClick={this.goBack} className="back_link">
     					<span className="blank_text">Назад</span>
     				</a>
     			</div>

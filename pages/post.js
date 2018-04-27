@@ -41,10 +41,6 @@ Post.getInitialProps = async function(context) {
   if(port !== undefined) {
     testData = `https://salty-ridge-45524.herokuapp.com/static/data/test-data.json`;
     single = `https://salty-ridge-45524.herokuapp.com/static/data/blog-single.json`;
-    //  if(testData == undefined || single == undefined) {
-    //   testData = `https://salty-ridge-45524.herokuapp.com/static/data/test-data.json`;
-    //   single = `https://salty-ridge-45524.herokuapp.com/static/data/blog-single.json`;
-    //  }
   }else {
      testData = '../static/data/test-data.json';
      single = '../static/data/blog-single.json';
@@ -59,9 +55,6 @@ Post.getInitialProps = async function(context) {
 
   if(port !== undefined) {
      tmlt = `https://salty-ridge-45524.herokuapp.com/static/templates/${data.templateUrl}`;
-    //  if(tmlt ==undefined) {
-    //   tmlt = `https://salty-ridge-45524.herokuapp.com/static/templates/${data.templateUrl}`;
-    //  }
   }else {
      tmlt = `../static/templates/${data.templateUrl}`;
   }
