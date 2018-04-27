@@ -69,8 +69,8 @@ export default class MyDocument extends Document {
                 </div>
             </div>
           <NextScript />
-          <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
           <script src="../static/js/yandeks_map.js"></script>
         </body>
       </html>
