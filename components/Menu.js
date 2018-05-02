@@ -6,14 +6,14 @@ export default class Menu extends React.Component {
     var body = document.body;
     body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
-    $('#rootIndex').scroll(function(){
+    var menu = $('.top_wr');
+    var logo = $('.logo');
+    var menuPos = $('.top_wr').offset().top;
+    var nav = $('.nav');
+  //   var content = $('.content-fake-bg');
+    var subscribe = $('.content .subscribe');
 
-        var menu = $('.top_wr');
-        var logo = $('.logo');
-        var menuPos = $('.top_wr').offset().top;
-        var nav = $('.nav');
-      //   var content = $('.content-fake-bg');
-        var subscribe = $('.content .subscribe');
+    $(window).scroll(function(){
         if($(this).scrollTop()>menu.height()){
             menu.addClass('scroll');
         }else{
