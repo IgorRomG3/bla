@@ -277,7 +277,10 @@ header {
       top: 11px;
       width: 39px;
       height: 2px;
-      background-color: #fff; }
+      background-color: #fff;
+      opacity: 0;
+      transition: all .2s ease;
+      transition-delay: .2s; }
 
   @media screen and (min-width: 993px) and (max-width: 1028px) {
     header {
@@ -285,14 +288,14 @@ header {
     }
   }
 
-  body.withJs header .description::before{
+  /* body.withJs header .description::before{
     opacity: 0;
     transition: all .2s ease;
     transition-delay: .2s;
-  }
-  body.withJs header .description.show::before{
+  } */
+  /* body.withJs header .description.show::before{
     opacity: 1;
-  }
+  } */
   /*body.withJs  header .top_wr.opacity {
       opacity: 0; }*/
   header .back_link,
@@ -788,7 +791,7 @@ footer {
    body.withJs .header_title, body.withJs .text_desc,
     body.withJs header .back_link,
     body.withJs header .date_public,
-    body.withJs header h1{
+    body.withJs header h1 {
       opacity: 1;
     }
     header .right_block {
