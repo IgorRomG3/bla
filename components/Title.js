@@ -12,7 +12,7 @@ export default class Title extends React.Component {
 
   componentDidMount() {
 
-		$(footer).css('display', 'flex');
+		$('footer').css('display', 'flex');
 
       	var back = $('.back_link');
       	var logo = $('header .logo svg path');
