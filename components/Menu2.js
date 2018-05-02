@@ -15,7 +15,7 @@ export default class Menu extends React.Component {
     		var nav = $('.nav');
     		var content = $('.content-fake-bg');
     		var subscribe = $('.content .subscribe');
-    		var subscribePos = $('.content .subscribe').before().position().top;
+    		// var subscribePos = $('.content .subscribe').before().position().top;
 
     		if($(this).scrollTop()>menu.height()){
     			menu.addClass('scroll');
