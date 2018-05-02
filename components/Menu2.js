@@ -28,20 +28,20 @@ export default class Menu extends React.Component {
             menu.removeClass('scroll');
         }
 
-        if($(this).scrollTop()> conPos){
+        if($(this).scrollTop()> conPos && conPos !== undefined){
             menu.addClass('changeColor');
             logo.addClass('black');
         }else{
             menu.removeClass('changeColor');
             logo.removeClass('black');
         }
-        if($(this).scrollTop()> hiddenMenu){
+        if($(this).scrollTop()> hiddenMenu && hiddenMenu !== undefined){
             menu.addClass('opacity');
         }else{
             menu.removeClass('opacity');
         }
 
-        if(menuPos>navPos){
+        if(menuPos>navPos && menuPos !== undefined && navPos !== undefined){
             nav.addClass('big');
             subscribe.addClass('small');
             content.addClass('black');
