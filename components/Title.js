@@ -16,7 +16,25 @@ export default class Title extends React.Component {
 		var body = document.body;
 		body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
-      	var menu = $('.top_wr');
+      	var back = $('.back_link');
+      	var logo = $('header .logo svg path');
+      	var date_public  = $('.date_public');
+      	var cont = $('.right_block h1, .description span');
+      	var cont = $('.description span');
+      	setTimeout(function(){
+      		back.addClass('block_show');
+      		date_public.addClass('block_show');
+      		logo.css('fill','#fff');
+			//   $('.right_block .text_desc').addClass('show');
+      	}, 300);
+      	setTimeout(function(){
+			splitText(".header_title", animateText);
+			$('.right_block .description').addClass('show');
+			$('body.withJs header .description.show::before').addClass('show');
+			splitText(".text_desc", animateText2);
+		  }, 500);
+		  
+		  var menu = $('.top_wr');
     		var logo = $('.logo');
     		// var conPos = $('.content-fake-bg').position().top;
     		var menuPos = $('.top_wr').offset().top;
