@@ -136,7 +136,7 @@ export default class Title extends React.Component {
   render() {
     return(
       <header>
-    		<Menu2 />
+    		<Menu />
     		<div className="bottom_wr">
     			<div className="left_block">
     				<a onClick={this.goBack} className="back_link">
