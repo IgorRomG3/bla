@@ -1,5 +1,6 @@
 import React from 'react';
 import {TweenLite, Expo} from 'gsap';
+import $ from 'jquery';
 
 export default class Menu extends React.Component {
 
