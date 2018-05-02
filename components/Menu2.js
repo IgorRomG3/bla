@@ -24,7 +24,7 @@ export default class Menu extends React.Component {
 
         // var conPos = $('.content-fake-bg').position().top;
         var menuPos = $('.top_wr').offset().top;
-        var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
+        // var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
         var navPos = $('.form-subscribe').offset().top - 80;
         var nav = $('.nav');
         var content = $('.content-fake-bg');
@@ -43,11 +43,11 @@ export default class Menu extends React.Component {
             menu.removeClass('changeColor');
             logo.removeClass('black');
         }
-        if($(this).scrollTop()> hiddenMenu){
-            menu.addClass('opacity');
-        }else{
-            menu.removeClass('opacity');
-        }
+        // if($(this).scrollTop()> hiddenMenu){
+        //     menu.addClass('opacity');
+        // }else{
+        //     menu.removeClass('opacity');
+        // }
 
         if(menuPos>navPos){
             nav.addClass('big');
