@@ -11,7 +11,6 @@ export default class Menu extends React.Component {
     var menu = $('.top_wr');
     var logo = $('.logo');
     logo.css('fill','#fff');
-    // var subscribePos = $('.content .subscribe').before().position().top;
 
    $(window).scroll(function() {
 

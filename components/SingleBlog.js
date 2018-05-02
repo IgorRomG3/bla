@@ -1,22 +1,9 @@
 import React from 'react';
-// import data from './../data/blog-single.json';
 import Title from './Title';
 import Content from './Content';
 import Next from './Next';
-import $ from 'jquery';
-import Footer from './Footer';
 
 export default class Blog extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.data = this.props.data;
-    this.i = this.props.i;
-    this.state = {
-      i: this.i,
-      data: this.data
-    }
-  }
 
   render() {
     return (
