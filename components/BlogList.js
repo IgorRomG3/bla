@@ -11,18 +11,18 @@ export default class BlogList extends React.Component {
           body.classList ? body.classList.add('withJs') : body.className += ' withJs';
           //Анимация меню, категорий и лого в меню
 
-          var back = $('.back_link'),
-              logo = $('header .logo svg path'),
-              date_public  = $('.date_public'),
-            preheader = $('.preheader'),
-            h1 = $('.h1'),
-            categories = $('.categories');
-          setTimeout(function(){
-              back.addClass('block_show');
-              date_public.addClass('block_show');
-              logo.css('fill','#fff');
-              $('.right_block .description').addClass('show');
-          }, 300);
+          // var back = $('.back_link'),
+          //     logo = $('header .logo svg path'),
+          //     date_public  = $('.date_public'),
+          //   preheader = $('.preheader'),
+          //   h1 = $('.h1'),
+          //   categories = $('.categories');
+          // setTimeout(function(){
+          //     back.addClass('block_show');
+          //     date_public.addClass('block_show');
+          //     logo.css('fill','#fff');
+          //     $('.right_block .description').addClass('show');
+          // }, 300);
 
           TweenLite.from(preheader, .5, {css:{top: '100px'}, ease: Power4.easeOut});
           TweenLite.to(preheader, .2, {css:{opacity: '1'}, ease: Power4.easeOut});
@@ -32,23 +32,23 @@ export default class BlogList extends React.Component {
           TweenLite.to(categories, .2, {css:{opacity: '1'}, ease: Power4.easeOut, delay: 0.4});
 
         //Меню
-        $(document).ready(function(){
+        // $(document).ready(function(){
 
-          $(window).on('scroll',function(){
+        //   $(window).on('scroll',function(){
 
-              var menu = $('.top_wr');
-              var logo = $('.logo');
-              var menuPos = $('.top_wr').offset().top;
-              var nav = $('.nav');
-            //   var content = $('.content-fake-bg');
-              var subscribe = $('.content .subscribe');
-              if($(this).scrollTop()>menu.height()){
-                  menu.addClass('scroll');
-              }else{
-                  menu.removeClass('scroll');
-              }
-          });
-          });
+        //       var menu = $('.top_wr');
+        //       var logo = $('.logo');
+        //       var menuPos = $('.top_wr').offset().top;
+        //       var nav = $('.nav');
+        //     //   var content = $('.content-fake-bg');
+        //       var subscribe = $('.content .subscribe');
+        //       if($(this).scrollTop()>menu.height()){
+        //           menu.addClass('scroll');
+        //       }else{
+        //           menu.removeClass('scroll');
+        //       }
+        //   });
+        //   });
 
         // const newsItemLink = $('.news-item-link');
 
