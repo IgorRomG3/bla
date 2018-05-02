@@ -23,15 +23,15 @@ export default class Menu extends React.Component {
         var content = $('.content-fake-bg');
         var subscribe = $('.content .subscribe');
 
-        if($('.content-fake-bg').position().top !== undefined) {
+        if($('.content-fake-bg').length > 1) {
             conPos = $('.content-fake-bg').position().top;
         }
 
-        if($('.nav').position().top+$('.top_wr').height() !== undefined) {
+        if($('.nav').length > 1) {
             hiddenMenu = $('.nav').position().top+$('.top_wr').height();
         }
 
-        if($('.form-subscribe').offset().top - 80 !== undefined) {
+        if($('.form-subscribe').length > 1) {
             navPos = $('.form-subscribe').offset().top - 80;
         }
         
