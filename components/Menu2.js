@@ -13,7 +13,7 @@ export default class Menu extends React.Component {
     logo.css('fill','#fff');
     // var subscribePos = $('.content .subscribe').before().position().top;
 
-   $('#rootPost').scroll(function() {
+   $('body').scroll(function() {
         var conPos = $('.content-fake-bg').position().top;
         var menuPos = $('.top_wr').offset().top;
         var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
@@ -22,20 +22,20 @@ export default class Menu extends React.Component {
         var content = $('.content-fake-bg');
         var subscribe = $('.content .subscribe');
         
-        if($(window).scrollTop()>menu.height()){
+        if($(this).scrollTop()>menu.height()){
             menu.addClass('scroll');
         }else{
             menu.removeClass('scroll');
         }
 
-        if($(window).scrollTop()> conPos){
+        if($(this).scrollTop()> conPos){
             menu.addClass('changeColor');
             logo.addClass('black');
         }else{
             menu.removeClass('changeColor');
             logo.removeClass('black');
         }
-        if($(window).scrollTop()> hiddenMenu){
+        if($(this).scrollTop()> hiddenMenu){
             menu.addClass('opacity');
         }else{
             menu.removeClass('opacity');
