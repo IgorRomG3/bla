@@ -41,17 +41,17 @@ export default class Content extends React.Component {
     		// }
 
 
-    		if(menuPos>navPos){
-    			nav.addClass('big');
-    			subscribe.addClass('small');
-    			content.addClass('black');
-    			TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 20)', ease: Expo.easeOut,delay: 0.1});
-    		}else{
-    			nav.removeClass('big');
-    			subscribe.removeClass('small');
-    			content.removeClass('black');
-    			TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 0)', ease: Expo.easeOut,delay: 0.1});
-    		}
+    		// if(menuPos>navPos){
+    		// 	nav.addClass('big');
+    		// 	subscribe.addClass('small');
+    		// 	content.addClass('black');
+    		// 	TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 20)', ease: Expo.easeOut,delay: 0.1});
+    		// }else{
+    		// 	nav.removeClass('big');
+    		// 	subscribe.removeClass('small');
+    		// 	content.removeClass('black');
+    		// 	TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 0)', ease: Expo.easeOut,delay: 0.1});
+    		// }
 
     		// Анимация контета секции класса 'content'
     		$('.container').each(function() {
