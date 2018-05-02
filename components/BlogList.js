@@ -50,18 +50,18 @@ export default class BlogList extends React.Component {
         //   });
         //   });
 
-        // const newsItemLink = $('.news-item-link');
+        const newsItemLink = $('.news-item-link');
 
-        // newsItemLink.click(function(e) {
-        //   e.preventDefault();
-        //   const linkUrl = $(this).attr('href');
-        //   $('#root').fadeOut(800);
-        //   TweenLite.to($('.h1'), 0.8, {y: -30});
-        //   TweenLite.to($('.h1'), 0.1, {opacity: 0});
-        //   //Прячем футер при переходе на отдельный пост
-        //   // $('#footer').css('visibility', 'hidden');
-        //   setTimeout(function(url) { window.location = url; }, 800, linkUrl);
-        // });
+        newsItemLink.click(function(e) {
+          e.preventDefault();
+          const linkUrl = $(this).attr('href');
+          $('#root').fadeOut(800);
+          TweenLite.to($('.h1'), 0.8, {y: -30});
+          TweenLite.to($('.h1'), 0.1, {opacity: 0});
+          //Прячем футер при переходе на отдельный пост
+          // $('#footer').css('visibility', 'hidden');
+          setTimeout(function(url) { window.location = url; }, 800, linkUrl);
+        });
 
         //Анимация появления постов    
         $(document).ready(function() {
