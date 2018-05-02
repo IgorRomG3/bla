@@ -2,6 +2,12 @@ import React from 'react';
 import $ from 'jquery';
 
 export default class Categories extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    }
+  }
 
   componentDidMount() {
 
