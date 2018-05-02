@@ -287,7 +287,7 @@ header {
       height: 800px;
     }
   }
-  
+
   body.withJs header .description.show::before{
     opacity: 1;
   }
@@ -597,7 +597,7 @@ footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-justify-content: space-between;
            justify-content: space-between; }
   footer .left_block {
