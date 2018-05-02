@@ -15,8 +15,8 @@ export default class BlogList extends React.Component {
           //     logo = $('header .logo svg path'),
           //     date_public  = $('.date_public'),
            var preheader = $('.preheader'),
-            h1 = $('.h1');
-          //   categories = $('.categories');
+            h1 = $('.h1'),
+            categories = $('.categories');
           // setTimeout(function(){
           //     back.addClass('block_show');
           //     date_public.addClass('block_show');
