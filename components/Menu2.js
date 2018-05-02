@@ -17,20 +17,20 @@ export default class Menu extends React.Component {
   		var subscribe = $('.content .subscribe');
   		// var subscribePos = $('.content .subscribe').before().position().top;
 
-  		if($(this).scrollTop()>menu.height()){
+  		if($(window).scrollTop()>menu.height()){
   			menu.addClass('scroll');
   		}else{
   			menu.removeClass('scroll');
   		}
 
-  		if($(this).scrollTop()> conPos){
+  		if($(window).scrollTop()> conPos){
   			menu.addClass('changeColor');
   			logo.addClass('black');
   		}else{
   			menu.removeClass('changeColor');
   			logo.removeClass('black');
   		}
-  		if($(this).scrollTop()> hiddenMenu){
+  		if($(window).scrollTop()> hiddenMenu){
   			menu.addClass('opacity');
   		}else{
   			menu.removeClass('opacity');
