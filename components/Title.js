@@ -38,12 +38,12 @@ export default class Title extends React.Component {
     		var logo = $('.logo');
     		var conPos = $('.content-fake-bg').position().top;
     		var menuPos = $('.top_wr').offset().top;
-    		var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
+    		// var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
     		var navPos = $('.form-subscribe').offset().top - 80;
     		var nav = $('.nav');
     		var content = $('.content-fake-bg');
     		var subscribe = $('.content .subscribe');
-    		var subscribePos = $('.content .subscribe').before().position().top;
+    		// var subscribePos = $('.content .subscribe').before().position().top;
 
     		if($(this).scrollTop()>menu.height()){
     			menu.addClass('scroll');
