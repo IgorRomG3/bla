@@ -11,31 +11,31 @@ export default class Menu extends React.Component {
     var menu = $('.top_wr');
     var logo = $('.logo');
     logo.css('fill','#fff');
-    var conPos = $('.content-fake-bg').position().top;
-    var menuPos = $('.top_wr').offset().top;
-    var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
-    var navPos = $('.form-subscribe').offset().top - 80;
-    var nav = $('.nav');
-    var content = $('.content-fake-bg');
-    var subscribe = $('.content .subscribe');
     // var subscribePos = $('.content .subscribe').before().position().top;
 
-   $(window).scroll(function() {
+   $('#rootPost').scroll(function() {
+        var conPos = $('.content-fake-bg').position().top;
+        var menuPos = $('.top_wr').offset().top;
+        var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
+        var navPos = $('.form-subscribe').offset().top - 80;
+        var nav = $('.nav');
+        var content = $('.content-fake-bg');
+        var subscribe = $('.content .subscribe');
         
-        if($(this).scrollTop()>menu.height()){
+        if($(window).scrollTop()>menu.height()){
             menu.addClass('scroll');
         }else{
             menu.removeClass('scroll');
         }
 
-        if($(this).scrollTop()> conPos){
+        if($(window).scrollTop()> conPos){
             menu.addClass('changeColor');
             logo.addClass('black');
         }else{
             menu.removeClass('changeColor');
             logo.removeClass('black');
         }
-        if($(this).scrollTop()> hiddenMenu){
+        if($(window).scrollTop()> hiddenMenu){
             menu.addClass('opacity');
         }else{
             menu.removeClass('opacity');
