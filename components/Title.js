@@ -25,7 +25,7 @@ export default class Title extends React.Component {
       	}, 300);
       	setTimeout(function(){
 			splitText(".header_title", animateText);
-			// $('.right_block .description').addClass('show');
+			$('.right_block .description').addClass('show');
 			// $('body.withJs header .description.show::before').addClass('show');
 			splitText(".text_desc", animateText2);
       	}, 500);
