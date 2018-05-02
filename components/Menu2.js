@@ -14,13 +14,26 @@ export default class Menu extends React.Component {
     // var subscribePos = $('.content .subscribe').before().position().top;
 
    $(window).scroll(function() {
-        var conPos = $('.content-fake-bg').position().top;
+
+        var conPos;
         var menuPos = $('.top_wr').offset().top;
-        var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
-        var navPos = $('.form-subscribe').offset().top - 80;
+        var hiddenMenu;
+        var navPos;
         var nav = $('.nav');
         var content = $('.content-fake-bg');
         var subscribe = $('.content .subscribe');
+
+        if($('.content-fake-bg').position().top !== undefined) {
+            conPos = $('.content-fake-bg').position().top;
+        }
+
+        if($('.nav').position().top+$('.top_wr').height() !== undefined) {
+            hiddenMenu = $('.nav').position().top+$('.top_wr').height();
+        }
+
+        if($('.form-subscribe').offset().top - 80 !== undefined) {
+            navPos = $('.form-subscribe').offset().top - 80;
+        }
         
         if($(this).scrollTop()>menu.height()){
             menu.addClass('scroll');
