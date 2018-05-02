@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import {TweenLite, Expo} from 'gsap';
-import Menu from './Menu';
+import Menu from './Menu2';
 
 export default class Title extends React.Component {
 
