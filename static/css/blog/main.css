@@ -277,10 +277,7 @@ header {
       top: 11px;
       width: 39px;
       height: 2px;
-      background-color: #fff;
-      opacity: 0;
-      transition: all .2s ease;
-      transition-delay: .2s; }
+      background-color: #fff;}
 
   @media screen and (min-width: 993px) and (max-width: 1028px) {
     header {
@@ -288,14 +285,14 @@ header {
     }
   }
 
-  /* body.withJs header .description::before{
+  body.withJs header .description::before{
     opacity: 0;
     transition: all .2s ease;
     transition-delay: .2s;
-  } */
-  /* body.withJs header .description.show::before{
+  }
+  body.withJs header .description.show::before{
     opacity: 1;
-  } */
+  }
   /*body.withJs  header .top_wr.opacity {
       opacity: 0; }*/
   header .back_link,
@@ -376,8 +373,7 @@ header {
   }
   body.withJs .header_title.show,
   body.withJs .text_desc.show,
-  body.withJs .description,
-  body.withJs show.description:before {
+  body.withJs .description {
     opacity: 1;
   }
 
