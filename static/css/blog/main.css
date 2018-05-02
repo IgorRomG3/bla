@@ -376,7 +376,7 @@ header {
   }
   body.withJs .header_title.show,
   body.withJs .text_desc.show,
-  body.withJs .description
+  body.withJs .description,
   body.withJs show.description:before {
     opacity: 1;
   }
