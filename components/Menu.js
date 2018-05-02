@@ -6,8 +6,6 @@ export default class Menu extends React.Component {
     var body = document.body;
     body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
-    var conPos;
-
     var menu = $('.top_wr');
     var logo = $('.logo');
     var menuPos = $('.top_wr').offset().top;

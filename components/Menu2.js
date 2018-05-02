@@ -22,7 +22,7 @@ export default class Menu extends React.Component {
 
    $(window).scroll(function() {
 
-        var conPos = $('.content-fake-bg').position().top;
+        // var conPos = $('.content-fake-bg').position().top;
         var menuPos = $('.top_wr').offset().top;
         var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
         var navPos = $('.form-subscribe').offset().top - 80;
@@ -36,7 +36,7 @@ export default class Menu extends React.Component {
             menu.removeClass('scroll');
         }
 
-        if($(this).scrollTop()> conPos){
+        if($(this).scrollTop()> 500){
             menu.addClass('changeColor');
             logo.addClass('black');
         }else{
