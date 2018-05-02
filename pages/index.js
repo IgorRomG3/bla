@@ -13,11 +13,6 @@ export default class Blog extends React.Component {
   render() {
     return(
         <div> 
-        <header className='empty'>
-          <Menu containerStyle='changeColor white-bg'
-                logoStyle='black'
-                titleStyle='title-black'/>
-        </header>
         <main>
       		<div className="container">
       			<div className="section-header">
