@@ -7,15 +7,15 @@ export default class BlogList extends React.Component {
 
   componentDidMount() {
 
-          var body = document.body;
-          body.classList ? body.classList.add('withJs') : body.className += ' withJs';
+          // var body = document.body;
+          // body.classList ? body.classList.add('withJs') : body.className += ' withJs';
           //Анимация меню, категорий и лого в меню
 
           // var back = $('.back_link'),
           //     logo = $('header .logo svg path'),
           //     date_public  = $('.date_public'),
-          //   preheader = $('.preheader'),
-          //   h1 = $('.h1'),
+           var preheader = $('.preheader'),
+            h1 = $('.h1');
           //   categories = $('.categories');
           // setTimeout(function(){
           //     back.addClass('block_show');
