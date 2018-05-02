@@ -277,19 +277,17 @@ header {
       top: 11px;
       width: 39px;
       height: 2px;
-      background-color: #fff;}
+      background-color: #fff;
+      opacity: 0;
+      transition: all .2s ease;
+      transition-delay: .2s;}
 
   @media screen and (min-width: 993px) and (max-width: 1028px) {
     header {
       height: 800px;
     }
   }
-
-  body.withJs header .description::before{
-    opacity: 0;
-    transition: all .2s ease;
-    transition-delay: .2s;
-  }
+  
   body.withJs header .description.show::before{
     opacity: 1;
   }
