@@ -2,7 +2,6 @@ import React from 'react';
 import $ from 'jquery';
 import {TweenLite, Expo, Power4} from 'gsap';
 import Subscribe from './Subscribe';
-import Footer from '../components/Footer';
 
 export default class Content extends React.Component {
 

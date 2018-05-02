@@ -5,7 +5,6 @@ import Menu from '../components/Menu';
 import Categories from '../components/Categories';
 import BlogList from '../components/BlogList';
 import Head from 'next/head';
-import Footer from '../components/Footer';
 import fetch from 'isomorphic-unfetch';
 
 export default class Blog extends React.Component {

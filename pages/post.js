@@ -1,7 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 import Menu from '../components/Menu';
 import Subscribe from '../components/Subscribe';
-import Footer from '../components/Footer';
 import Title from '../components/Title';
 import Head from 'next/head';
 import Content from '../components/Content';

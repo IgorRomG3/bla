@@ -4,7 +4,6 @@ import Title from './Title';
 import Content from './Content';
 import Next from './Next';
 import $ from 'jquery';
-import Footer from './Footer';
 
 export default class Blog extends React.Component {
 
