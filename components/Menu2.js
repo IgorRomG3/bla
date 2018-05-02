@@ -1,4 +1,5 @@
 import React from 'react';
+import {TweenLite, Expo} from 'gsap';
 
 export default class Menu extends React.Component {
 
@@ -7,7 +8,8 @@ export default class Menu extends React.Component {
     body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
     var menu = $('.top_wr');
-    		var logo = $('.logo');
+            var logo = $('.logo');
+            logo.css('fill','#fff');
     		var conPos = $('.content-fake-bg').position().top;
     		var menuPos = $('.top_wr').offset().top;
     		var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
@@ -35,7 +37,6 @@ export default class Menu extends React.Component {
     		}else{
     			menu.removeClass('opacity');
     		}
-
 
     		if(menuPos>navPos){
     			nav.addClass('big');
