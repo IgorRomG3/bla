@@ -8,7 +8,7 @@ export default class Menu extends React.Component {
     var body = document.body;
     body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
-   $('#rootPost').on('scroll', function() {
+   $('#rootPost').scroll(function() {
         var menu = $('.top_wr');
         var logo = $('.logo');
         logo.css('fill','#fff');
@@ -52,6 +52,8 @@ export default class Menu extends React.Component {
             TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 0)', ease: Expo.easeOut,delay: 0.1});
         }
    });
+
+   $('footer').css('display', 'flex');
            
   }
   render() {

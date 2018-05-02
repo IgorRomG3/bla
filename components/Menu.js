@@ -6,7 +6,7 @@ export default class Menu extends React.Component {
     var body = document.body;
     body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
-    $('#rootIndex').on('scroll',function(){
+    $('#rootIndex').scroll(function(){
 
         var menu = $('.top_wr');
         var logo = $('.logo');
@@ -20,7 +20,8 @@ export default class Menu extends React.Component {
             menu.removeClass('scroll');
         }
     });
-           
+       
+    $('footer').css('display', 'flex');
   }
   render() {
     return (
