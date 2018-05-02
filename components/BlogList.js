@@ -72,27 +72,27 @@ export default class BlogList extends React.Component {
                   TweenLite.to($(this).find('.news-fake-bg'), .5, {bottom: '100%', ease: Power4.easeOut, delay: 0.8 + i/5});
               }
           });
-        });
 
-        $(window).scroll(function(){
+          $(window).scroll(function(){
 
-          $('.news-item').each(function(i) {
-              if($(window).scrollTop() >= $(this).offset().top - 600 && i>2) {
-                  TweenLite.to($(this), .5, {opacity: '1', ease: Power4.easeOut, delay: 0.6 + i/5});
-                  TweenLite.to($(this).find('.news-fake-bg'), .5, {bottom: '100%', ease: Power4.easeOut, delay: 0.8 + i/5});
-              }
-          });
-
-          $('.news-header-wrap').each(function(i) {
-              if($(window).scrollTop() >= $(this).parent().offset().top - 350) {
-                  setTimeout(()=> {
-                      $(this).css('opacity','1');
-                      TweenLite.to($(this).find('.news-list-bradcrumbs'), 1, {opacity: '1', ease: Power4.easeOut});
-                      TweenLite.to($(this).find('.news-item-line'), 1, {opacity: '1', ease: Power4.easeOut, delay: 0.3});
-                      TweenLite.to($(this).find('.news-h3'), 1, {opacity: '1', ease: Power4.easeOut, delay: 0.6});
-                      TweenLite.to($(this).find('.news-h3'), .5, {bottom: '0', ease: Power4.easeOut, delay: 0.6});
-                  }, 1000);
-              }
+            $('.news-item').each(function(i) {
+                if($(window).scrollTop() >= $(this).offset().top - 600 && i>2) {
+                    TweenLite.to($(this), .5, {opacity: '1', ease: Power4.easeOut, delay: 0.6 + i/5});
+                    TweenLite.to($(this).find('.news-fake-bg'), .5, {bottom: '100%', ease: Power4.easeOut, delay: 0.8 + i/5});
+                }
+            });
+  
+            $('.news-header-wrap').each(function(i) {
+                if($(window).scrollTop() >= $(this).parent().offset().top - 350) {
+                    setTimeout(()=> {
+                        $(this).css('opacity','1');
+                        TweenLite.to($(this).find('.news-list-bradcrumbs'), 1, {opacity: '1', ease: Power4.easeOut});
+                        TweenLite.to($(this).find('.news-item-line'), 1, {opacity: '1', ease: Power4.easeOut, delay: 0.3});
+                        TweenLite.to($(this).find('.news-h3'), 1, {opacity: '1', ease: Power4.easeOut, delay: 0.6});
+                        TweenLite.to($(this).find('.news-h3'), .5, {bottom: '0', ease: Power4.easeOut, delay: 0.6});
+                    }, 1000);
+                }
+            });
           });
         });
   }
