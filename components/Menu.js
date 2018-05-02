@@ -6,7 +6,7 @@ export default class Menu extends React.Component {
     var body = document.body;
     body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
-    $(window).on('scroll',function(){
+    $('#rootIndex').on('scroll',function(){
 
         var menu = $('.top_wr');
         var logo = $('.logo');

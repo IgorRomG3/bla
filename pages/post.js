@@ -8,7 +8,7 @@ import Content from '../components/Content';
 import Next from '../components/Next';
 
 const Post =  (props) => (
-  <div>
+  <div id="rootPost">
     <Title data={props.data} />
     <Content templateUrl={props.template} />
     <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />

@@ -12,7 +12,7 @@ export default class Blog extends React.Component {
 
   render() {
     return(
-        <div id="root"> 
+        <div id="rootIndex"> 
         <header className='empty'>
           <Menu containerStyle='changeColor white-bg'
                 logoStyle='black'
