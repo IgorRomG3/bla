@@ -8,48 +8,50 @@ export default class Menu extends React.Component {
     var body = document.body;
     body.classList ? body.classList.add('withJs') : body.className += ' withJs';
 
-    var menu = $('.top_wr');
-            var logo = $('.logo');
-            logo.css('fill','#fff');
-    		var conPos = $('.content-fake-bg').position().top;
-    		var menuPos = $('.top_wr').offset().top;
-    		var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
-    		var navPos = $('.form-subscribe').offset().top - 80;
-    		var nav = $('.nav');
-    		var content = $('.content-fake-bg');
-    		var subscribe = $('.content .subscribe');
-    		// var subscribePos = $('.content .subscribe').before().position().top;
+   $(window).on('scroll', function() {
+        var menu = $('.top_wr');
+        var logo = $('.logo');
+        logo.css('fill','#fff');
+        var conPos = $('.content-fake-bg').position().top;
+        var menuPos = $('.top_wr').offset().top;
+        var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
+        var navPos = $('.form-subscribe').offset().top - 80;
+        var nav = $('.nav');
+        var content = $('.content-fake-bg');
+        var subscribe = $('.content .subscribe');
+        // var subscribePos = $('.content .subscribe').before().position().top;
+        
+        if($(window).scrollTop()>menu.height()){
+            menu.addClass('scroll');
+        }else{
+            menu.removeClass('scroll');
+        }
 
-    		if($(window).scrollTop()>menu.height()){
-    			menu.addClass('scroll');
-    		}else{
-    			menu.removeClass('scroll');
-    		}
+        if($(window).scrollTop()> conPos){
+            menu.addClass('changeColor');
+            logo.addClass('black');
+        }else{
+            menu.removeClass('changeColor');
+            logo.removeClass('black');
+        }
+        if($(window).scrollTop()> hiddenMenu){
+            menu.addClass('opacity');
+        }else{
+            menu.removeClass('opacity');
+        }
 
-    		if($(window).scrollTop()> conPos){
-    			menu.addClass('changeColor');
-    			logo.addClass('black');
-    		}else{
-    			menu.removeClass('changeColor');
-    			logo.removeClass('black');
-    		}
-    		if($(window).scrollTop()> hiddenMenu){
-    			menu.addClass('opacity');
-    		}else{
-    			menu.removeClass('opacity');
-    		}
-
-    		if(menuPos>navPos){
-    			nav.addClass('big');
-    			subscribe.addClass('small');
-    			content.addClass('black');
-    			TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 20)', ease: Expo.easeOut,delay: 0.1});
-    		}else{
-    			nav.removeClass('big');
-    			subscribe.removeClass('small');
-    			content.removeClass('black');
-    			TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 0)', ease: Expo.easeOut,delay: 0.1});
-    		}
+        if(menuPos>navPos){
+            nav.addClass('big');
+            subscribe.addClass('small');
+            content.addClass('black');
+            TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 20)', ease: Expo.easeOut,delay: 0.1});
+        }else{
+            nav.removeClass('big');
+            subscribe.removeClass('small');
+            content.removeClass('black');
+            TweenLite.to($('.nav_wr'), 1, {transform:'matrix(1, 0, 0, 1, 0, 0)', ease: Expo.easeOut,delay: 0.1});
+        }
+   });
            
   }
   render() {
