@@ -788,8 +788,7 @@ footer {
    body.withJs .header_title, body.withJs .text_desc,
     body.withJs header .back_link,
     body.withJs header .date_public,
-    body.withJs header h1,
-    body.withJs header .description::before{
+    body.withJs header h1{
       opacity: 1;
     }
     header .right_block {
