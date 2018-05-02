@@ -12,6 +12,8 @@ export default class Title extends React.Component {
 
   componentDidMount() {
 
+	// $('footer').css('display', 'flex');
+
       	var back = $('.back_link');
       	var logo = $('header .logo svg path');
       	var date_public  = $('.date_public');
@@ -124,9 +126,7 @@ export default class Title extends React.Component {
       	if(callback){
       		callback(text);
       	}
-	  }
-	  
-	  $('footer').css('display', 'flex');
+      }
   }
 
   goBack() {
