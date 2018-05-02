@@ -1,6 +1,27 @@
 import React from 'react';
 
 export default class Menu extends React.Component {
+
+  componentDidMount() {
+    var body = document.body;
+    body.classList ? body.classList.add('withJs') : body.className += ' withJs';
+
+    $(window).on('scroll',function(){
+
+        var menu = $('.top_wr');
+        var logo = $('.logo');
+        var menuPos = $('.top_wr').offset().top;
+        var nav = $('.nav');
+      //   var content = $('.content-fake-bg');
+        var subscribe = $('.content .subscribe');
+        if($(this).scrollTop()>menu.height()){
+            menu.addClass('scroll');
+        }else{
+            menu.removeClass('scroll');
+        }
+    });
+           
+  }
   render() {
     return (
         <div className={`top_wr logo_rpw ${this.props.containerStyle !== undefined ? this.props.containerStyle : ''}`}>
