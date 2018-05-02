@@ -55,7 +55,7 @@ export default class BlogList extends React.Component {
         newsItemLink.click(function(e) {
           e.preventDefault();
           const linkUrl = $(this).attr('href');
-          $('#root').fadeOut(800);
+          $('#__next').fadeOut(800);
           TweenLite.to($('.h1'), 0.8, {y: -30});
           TweenLite.to($('.h1'), 0.1, {opacity: 0});
           //Прячем футер при переходе на отдельный пост
