@@ -13,7 +13,7 @@ export default class Menu extends React.Component {
     logo.css('fill','#fff');
     // var subscribePos = $('.content .subscribe').before().position().top;
 
-   $('body').scroll(function() {
+   $(window).scroll(function() {
         var conPos = $('.content-fake-bg').position().top;
         var menuPos = $('.top_wr').offset().top;
         var hiddenMenu = $('.nav').position().top+$('.top_wr').height();
