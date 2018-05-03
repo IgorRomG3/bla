@@ -25,8 +25,6 @@ export default class BlogList extends React.Component {
       $('#rootIndex').fadeOut(800);
       TweenLite.to($('.h1'), 0.8, {y: -30});
       TweenLite.to($('.h1'), 0.1, {opacity: 0});
-      //Прячем футер при переходе на отдельный пост
-      // $('#footer').css('visibility', 'hidden');
       setTimeout(function(url) { window.location = url; }, 800, linkUrl);
     });
 
