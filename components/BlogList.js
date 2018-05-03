@@ -17,6 +17,19 @@ export default class BlogList extends React.Component {
     TweenLite.from(categories, .5, {css:{top: '100px'}, ease: Power4.easeOut, delay: 0.4});
     TweenLite.to(categories, .2, {css:{opacity: '1'}, ease: Power4.easeOut, delay: 0.4});
 
+    const newsItemLink = $('.news-item-link');
+
+    newsItemLink.click(function(e) {
+      e.preventDefault();
+      const linkUrl = $(this).attr('href');
+      $('#rootIndex').fadeOut(800);
+      TweenLite.to($('.h1'), 0.8, {y: -30});
+      TweenLite.to($('.h1'), 0.1, {opacity: 0});
+      //Прячем футер при переходе на отдельный пост
+      // $('#footer').css('visibility', 'hidden');
+      setTimeout(function(url) { window.location = url; }, 800, linkUrl);
+    });
+
     //Анимация появления постов    
     $(document).ready(function() {
       $('.news-item').each(function(i) {
