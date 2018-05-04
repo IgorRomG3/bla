@@ -18,12 +18,21 @@ export default class Subscribe extends React.Component {
 
   postNewEmail() {
     var subscribe = document.getElementsByClassName('subscribe-email')[0],
-        emailText = subscribe.value.trim();
+        emailText = subscribe.value.trim(),
+        resMsg = document.getElementsByClassName('res-msg')[0];
 
     fetch(`https://api.unisender.com/ru/api/subscribe?format=json&api_key=5c9twbzd8rqzg5bmupq9b87hff9tr6uf4pfg1aga&
 list_ids=12130797&fields[email]=${emailText}&double_optin=3`, {method: "POST"})
     .then(function(res){ return res.json(); })
-    .then(function(data){ console.log( JSON.stringify( data ) ) })
+    .then(function(data){
+      if(data.errors === undefined) {
+        resMsg.innerHTML = 'Неверно введенные данные, попробуйте еще раз';
+        resMsg.style.display = 'block';
+      }else {
+        resMsg.innerHTML = 'Спасибо за подписку. Будем на связи!';
+        resMsg.style.display = 'block';
+      }
+    })
   }
 
   render() {
@@ -38,6 +47,7 @@ list_ids=12130797&fields[email]=${emailText}&double_optin=3`, {method: "POST"})
                required />
         <div className="subscribe-btn"
              onClick = {this.postNewEmail} />
+        <p className="res-msg"></p>     
       </div>
     )
   }
