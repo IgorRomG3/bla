@@ -39,20 +39,20 @@ list_ids=12130797&fields[email]=${emailText}&double_optin=3`, {method: "POST"})
 
   render() {
     return(
-      <div className="form-subscribe">
-        <div>
-        <input type="email"
-               name="subscribe-email"
-               onFocus = {this.onFocus}
-               onBlur = {this.onBlur}
-               className="subscribe-email"
-               placeholder="Подпишитесь на нашу Рассылку"
-               required />
-        <div className="subscribe-btn"
-             onClick = {this.postNewEmail} />   
+        <div className="form-subscribe-wrap">
+          <div className="form-subscribe">
+            <input type="email"
+                  name="subscribe-email"
+                  onFocus = {this.onFocus}
+                  onBlur = {this.onBlur}
+                  className="subscribe-email"
+                  placeholder="Подпишитесь на нашу Рассылку"
+                  required />
+            <div className="subscribe-btn"
+                onClick = {this.postNewEmail} />         
+          </div>
+          <p className="res-msg"></p>
         </div>
-        <p className="res-msg"></p> 
-      </div> 
     )
   }
 }
