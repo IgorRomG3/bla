@@ -34,10 +34,9 @@ export default class Subscribe extends React.Component {
                onBlur = {this.onBlur}
                className="subscribe-email"
                placeholder="Подпишитесь на нашу Рассылку" />
-        <input type="submit"
+        <button type="submit"
                className="subscribe-btn"
-               onClick = {this.getLists}
-               value="" />
+               onClick = {this.getLists} />
       </form>
     )
   }
