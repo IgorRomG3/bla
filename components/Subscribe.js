@@ -27,16 +27,17 @@ export default class Subscribe extends React.Component {
 
   render() {
     return(
-      <div className="form-subscribe">
+      <form className="form-subscribe">
         <input type="email"
                name="subscribe-email"
                onFocus = {this.onFocus}
                onBlur = {this.onBlur}
                className="subscribe-email"
                placeholder="Подпишитесь на нашу Рассылку" />
-        <div className="subscribe-btn"
-                onClick = {this.getLists}></div>
-      </div>
+        <input type="submit"
+               className="subscribe-btn"
+               onClick = {this.getLists} />
+      </form>
     )
   }
 }
