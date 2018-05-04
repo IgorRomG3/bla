@@ -2018,7 +2018,7 @@ header.empty {
 }
 
 .res-msg {
-  font-size: 10px;
+  font-size: 10px !important;
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;

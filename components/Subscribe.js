@@ -29,12 +29,10 @@ list_ids=12130797&fields[email]=${emailText}&double_optin=3`, {method: "POST"})
         resMsg.innerHTML = 'Неверно введенные данные, попробуйте еще раз';
         resMsg.style.color = 'red';
         resMsg.style.display = 'block';
-        console.log(data, 'if');
       }else {
         resMsg.innerHTML = 'Спасибо за подписку. Будем на связи!';
         resMsg.style.color = 'green';
         resMsg.style.display = 'block';
-        console.log(data, 'else');
       }
     })
   }
