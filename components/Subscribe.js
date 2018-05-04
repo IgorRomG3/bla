@@ -25,7 +25,7 @@ export default class Subscribe extends React.Component {
 list_ids=12130797&fields[email]=${emailText}&double_optin=3`, {method: "POST"})
     .then(function(res){ return res.json(); })
     .then(function(data){
-      if(data.errors !== undefined) {
+      if(data.error !== undefined) {
         resMsg.innerHTML = 'Неверно введенные данные, попробуйте еще раз';
         resMsg.style.color = 'red';
         resMsg.style.display = 'block';
