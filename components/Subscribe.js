@@ -17,7 +17,9 @@ export default class Subscribe extends React.Component {
   getLists() {
     var subscribe = document.getElementsByClassName('subscribe-email')[0];
 
-    console.log(subscribe.trim());
+    var subscribeEmail = subscribe.val();
+
+    console.log(subscribeEmail.trim());
   }
 
   render() {
