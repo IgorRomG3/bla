@@ -25,7 +25,7 @@ export default class Subscribe extends React.Component {
 
   render() {
     return(
-      <form className="form-subscribe">
+      <div className="form-subscribe">
         <input type="email"
                name="subscribe-email"
                onFocus = {this.onFocus}
@@ -33,11 +33,9 @@ export default class Subscribe extends React.Component {
                className="subscribe-email"
                placeholder="Подпишитесь на нашу Рассылку"
                required />
-        <input type="submit"
-               className="subscribe-btn"
-               onClick = {this.postNewEmail}
-               value="" />
-      </form>
+        <div className="subscribe-btn"
+             onClick = {this.postNewEmail} />
+      </div>
     )
   }
 }
