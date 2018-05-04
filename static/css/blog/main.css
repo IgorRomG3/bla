@@ -2015,11 +2015,10 @@ header.empty {
 }
 
 .res-msg {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  max-width: none;
   font-weight: 700;
   display: none;
   color: #777779;

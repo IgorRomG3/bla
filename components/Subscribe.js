@@ -37,7 +37,8 @@ list_ids=12130797&fields[email]=${emailText}&double_optin=3`, {method: "POST"})
 
   render() {
     return(
-      <div className="form-subscribe">
+      <div>
+        <div className="form-subscribe">
         <input type="email"
                name="subscribe-email"
                onFocus = {this.onFocus}
@@ -46,9 +47,10 @@ list_ids=12130797&fields[email]=${emailText}&double_optin=3`, {method: "POST"})
                placeholder="Подпишитесь на нашу Рассылку"
                required />
         <div className="subscribe-btn"
-             onClick = {this.postNewEmail} />
-        <p className="res-msg"></p>     
-      </div>
+             onClick = {this.postNewEmail} />   
+        </div>
+        <p className="res-msg"></p> 
+      </div> 
     )
   }
 }
