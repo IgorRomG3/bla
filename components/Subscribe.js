@@ -18,7 +18,11 @@ export default class Subscribe extends React.Component {
     var subscribe = document.getElementsByClassName('subscribe-email')[0],
         emailText = subscribe.value;
 
-    console.log(emailText.trim());
+    if(emailText !== '') {
+      console.log(emailText.trim());
+    }else {
+      console.log('enter email');
+    }
   }
 
   render() {
