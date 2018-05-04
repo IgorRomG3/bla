@@ -36,7 +36,8 @@ export default class Subscribe extends React.Component {
                placeholder="Подпишитесь на нашу Рассылку" />
         <input type="submit"
                className="subscribe-btn"
-               onClick = {this.getLists} />
+               onClick = {this.getLists}
+               value="" />
       </form>
     )
   }
