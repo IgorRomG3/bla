@@ -15,11 +15,10 @@ export default class Subscribe extends React.Component {
   }
 
   getLists() {
-    var subscribe = document.getElementsByClassName('subscribe-email')[0];
+    var subscribe = document.getElementsByClassName('subscribe-email')[0],
+        emailText = subscribe.value;
 
-    var subscribeEmail = subscribe.val();
-
-    console.log(subscribeEmail.trim());
+    console.log(emailText.trim());
   }
 
   render() {
