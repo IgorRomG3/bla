@@ -6,13 +6,11 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 const PORT = process.env.PORT
-const app2 = express();
-
-app2.use(compress());
 
 app.prepare()
 .then(() => {
   const server = express()
+  server.use(compress());
 
   server.get('/:route', (req, res) => {
     const actualPage = '/post'
