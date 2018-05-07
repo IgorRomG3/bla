@@ -14,7 +14,6 @@ export default class MyDocument extends Document {
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta name="theme-color" content="#000000" />
             <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /> 
-            <link rel="stylesheet" href="../static/css/fontsblog.css" />
             <link rel="stylesheet" href="../static/css/blog/bootstrap-reboot.min.css" />
             <link rel="stylesheet" href="../static/css/blog/main.css" />
             <title>Блог</title>
@@ -69,6 +68,7 @@ export default class MyDocument extends Document {
                 </div>
             </div>
           <NextScript />
+          <link rel="stylesheet" href="../static/css/fontsblog.css" />
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
           <script src="../static/js/yandeks_map.js"></script>
