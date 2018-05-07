@@ -1,5 +1,6 @@
 const express = require('express')
 const next = require('next')
+//модуль для сжатия файлов
 const compress = require('compression')
 
 const dev = process.env.NODE_ENV !== 'production'
@@ -10,6 +11,7 @@ const PORT = process.env.PORT
 app.prepare()
 .then(() => {
   const server = express()
+  //сжатие файлов
   server.use(compress());
 
   server.get('/:route', (req, res) => {
