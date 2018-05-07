@@ -1,10 +1,13 @@
 const express = require('express')
 const next = require('next')
+const compression = require('compression')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 const PORT = process.env.PORT
+
+app.use(express.compress({threshold: 0}));
 
 app.prepare()
 .then(() => {
