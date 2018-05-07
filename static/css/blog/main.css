@@ -369,7 +369,7 @@ header.empty{min-height:200px;max-height:200px;height:100px;background:transpare
 }
 @media screen and (max-width:768px){.news-item{width:100%;height:auto;margin-bottom:30px;}
 }
-@media screen and (max-width:1281px) {.news-img{height: 19.52vw;}}
+@media screen and (min-width:1281px) {.news-img{height: 19.52vw;}}
 .news-item-link{position:absolute;top:0;right:0;bottom:0;left:0;}
 .news-img-wrap{margin:0 3vw;position:relative;overflow:hidden;-webkit-transition:transform .5s ease;-moz-transition:transform .5s ease;-ms-transition:transform .5s ease;-o-transition:transform .5s ease;transition:transform .5s ease;}
 @media screen and (max-width:768px){.news-img-wrap{margin:0;}
