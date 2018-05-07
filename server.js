@@ -6,6 +6,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 const PORT = process.env.PORT
 
+app.use(express.compress({threshold: 0}));
+
 app.prepare()
 .then(() => {
   const server = express()
