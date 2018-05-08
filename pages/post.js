@@ -24,8 +24,7 @@ Post.getInitialProps = async function(context) {
 
   let testData,
       single,
-      tmlt,
-      data;
+      tmlt;
 
   if(port !== undefined) {
     testData = `https://salty-ridge-45524.herokuapp.com/static/data/test-data.json`;
@@ -35,19 +34,11 @@ Post.getInitialProps = async function(context) {
      single = '../static/data/blog-single.json';
   }
 
-  const res2 = await fetch(single)
+  const res2 = await fetch(testData)
   const posts = await res2.json()
   console.log(posts,'posts data');
 
-  outer:for(var i=0; i < posts.length; i++) {
-    for(var key in posts[i]) {
-      if(posts[i][key] === route) {
-        data = posts[i];
-        break outer;
-      }
-    }
-  }
-  // var data = posts[route];
+  const data = posts[route];
   console.log(data.id, 'data index');
 
   if(port !== undefined) {
