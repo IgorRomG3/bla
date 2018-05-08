@@ -40,7 +40,7 @@ Post.getInitialProps = async function(context) {
   console.log(posts,'posts data');
 
   outer:for(var i=0; i < posts.length; i++) {
-    for(var key in blog) {
+    for(var key in posts[i]) {
       if(blog[key] === route) {
         data = posts[i];
         break outer;
