@@ -51,7 +51,7 @@ Post.getInitialProps = async function(context) {
   console.log(data.id, 'data index');
 
   if(port !== undefined) {
-     tmlt = `https://salty-ridge-45524.herokuapp.com/static/templates/${data.templateUrl}`;
+     tmlt = `https://salty-ridge-45524.herokuapp.com/${data.templateUrl}`;
   }else {
      tmlt = `../static/templates/${data.templateUrl}`;
   }
