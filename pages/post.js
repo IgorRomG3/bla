@@ -10,7 +10,7 @@ const Post =  (props) => (
   <div id="rootPost">
     <Title data={props.data} />
     <Content templateUrl={props.template} />
-    <Next href={props.data.id < props.data.length - 1 ? props.data[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.data.length - 1 ? '' : props.data[props.data.id + 1].title} />
+    <Next href={props.data.id < props.data.length - 1 ? props.data[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.data.length - 1 ? '' : props.data[+props.data.id + 1].title} />
   </div>  
 )
 
