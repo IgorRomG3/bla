@@ -48,12 +48,12 @@ Post.getInitialProps = async function(context) {
   }
 
   // const data = posts[route];
-  console.log(data.id, 'data index');
+  console.log(data, 'current data');
 
   if(port !== undefined) {
      tmlt = `https://salty-ridge-45524.herokuapp.com/${data.templateUrl}`;
   }else {
-     tmlt = `../static/templates/${data.templateUrl}`;
+     tmlt = `../${data.templateUrl}`;
   }
 
   const res3 = await fetch(tmlt)
