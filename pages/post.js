@@ -10,7 +10,7 @@ const Post =  (props) => (
   <div id="rootPost">
     <Title data={props.data} />
     <Content templateUrl={props.template} />
-    <Next href={props.data.id < props.data.length - 1 ? props.data[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.data.length - 1 ? '' : props.data[+props.data.id + 1].title} />
+    <Next href={props.data.id < props.data.length - 1 ? props.data[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.data[props.data.id + 1].title} />
   </div>  
 )
 
@@ -59,11 +59,11 @@ Post.getInitialProps = async function(context) {
   const res3 = await fetch(tmlt)
   const template = await res3.text()
 
-  // const res4 = await fetch(single)
-  // const array = await res4.json()
+  const res4 = await fetch(single)
+  const array = await res4.json()
 
 
-  return {data, template};
+  return {data, templat, array};
 }
 
 export default Post;
