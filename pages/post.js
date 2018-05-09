@@ -10,7 +10,7 @@ const Post =  (props) => (
   <div id="rootPost">
     <Title data={props.data} />
     <Content templateUrl={props.template} />
-    <Next href={props.index < props.array.length - 1 ? props.array[index + 1].route : "#"} nextTitle={props.index >= props.array.length - 1 ? '' : props.array[index + 1].title} />
+    <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />
   </div>  
 )
 
@@ -24,9 +24,8 @@ Post.getInitialProps = async function(context) {
 
   let testData,
       single,
-      tmlt,
-      data,
-      index;
+      tmlt;
+  var data;
 
   if(port !== undefined) {
     // testData = `https://salty-ridge-45524.herokuapp.com/static/data/test-data.json`;
@@ -43,7 +42,6 @@ Post.getInitialProps = async function(context) {
   for(var i=0; i< posts.length; i++) {
     for(var key in posts[i]) {
       if(posts[i][key] === route) {
-        index = i;
         data = posts[i]
       }
     }
@@ -51,7 +49,6 @@ Post.getInitialProps = async function(context) {
 
   // const data = posts[route];
   console.log(data, 'current data');
-  console.log(index);
 
   if(port !== undefined) {
      tmlt = `https://salty-ridge-45524.herokuapp.com/${data.templateUrl}`;
@@ -65,7 +62,8 @@ Post.getInitialProps = async function(context) {
   const res4 = await fetch(single)
   const array = await res4.json()
 
-  return {data, template, array, index};
+
+  return {data, template, array};
 }
 
 export default Post;
