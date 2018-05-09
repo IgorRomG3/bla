@@ -10,7 +10,7 @@ const Post =  (props) => (
   <div id="rootPost">
     <Title data={props.data} />
     <Content templateUrl={props.template} />
-    <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />
+    <Next href={props.data.index < props.array.length - 1 ? props.array[props.data.index + 1].route : "#"} nextTitle={props.data.index >= props.array.length - 1 ? '' : props.array[props.data.index + 1].title} />
   </div>  
 )
 
@@ -42,7 +42,7 @@ Post.getInitialProps = async function(context) {
   for(var i=0; i< posts.length; i++) {
     for(var key in posts[i]) {
       if(posts[i][key] === route) {
-        data = posts[i]
+        data = {post:posts[i], index: i}
       }
     }
   }
@@ -51,9 +51,9 @@ Post.getInitialProps = async function(context) {
   console.log(data, 'current data');
 
   if(port !== undefined) {
-     tmlt = `https://salty-ridge-45524.herokuapp.com/${data.templateUrl}`;
+     tmlt = `https://salty-ridge-45524.herokuapp.com/${data.post.templateUrl}`;
   }else {
-     tmlt = `../${data.templateUrl}`;
+     tmlt = `../${data.post.templateUrl}`;
   }
 
   const res3 = await fetch(tmlt)
