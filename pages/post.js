@@ -10,7 +10,7 @@ const Post =  (props) => (
   <div id="rootPost">
     <Title data={props.data} />
     <Content templateUrl={props.template} />
-    <Next href={props.data.id < props.array.length - 1 ? props.array[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.array.length - 1 ? '' : props.array[props.data.id + 1].title} />
+    <Next href={props.data.id < props.data.length - 1 ? props.data[props.data.id + 1].route : "#"} nextTitle={props.data.id >= props.data.length - 1 ? '' : props.data[props.data.id + 1].title} />
   </div>  
 )
 
@@ -25,20 +25,29 @@ Post.getInitialProps = async function(context) {
   let testData,
       single,
       tmlt;
+  var data;
 
   if(port !== undefined) {
-    testData = `https://salty-ridge-45524.herokuapp.com/static/data/test-data.json`;
+    // testData = `https://salty-ridge-45524.herokuapp.com/static/data/test-data.json`;
     single = `https://salty-ridge-45524.herokuapp.com/static/data/blog-single.json`;
   }else {
-     testData = '../static/data/test-data.json';
+    //  testData = '../static/data/test-data.json';
      single = '../static/data/blog-single.json';
   }
 
-  const res2 = await fetch(testData)
+  const res2 = await fetch(single)
   const posts = await res2.json()
   console.log(posts,'posts data');
 
-  const data = posts[route];
+  for(var i=0; i< posts.length; i++) {
+    for(var key in posts[i]) {
+      if(posts[i][key] === route) {
+        data = posts[i]
+      }
+    }
+  }
+
+  // const data = posts[route];
   console.log(data.id, 'data index');
 
   if(port !== undefined) {
@@ -50,11 +59,11 @@ Post.getInitialProps = async function(context) {
   const res3 = await fetch(tmlt)
   const template = await res3.text()
 
-  const res4 = await fetch(single)
-  const array = await res4.json()
+  // const res4 = await fetch(single)
+  // const array = await res4.json()
 
 
-  return {data, template, array};
+  return {data, template};
 }
 
 export default Post;
