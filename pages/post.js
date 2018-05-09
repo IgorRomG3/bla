@@ -24,8 +24,8 @@ Post.getInitialProps = async function(context) {
 
   let testData,
       single,
-      tmlt;
-  var data,
+      tmlt,
+      data,
       index;
 
   if(port !== undefined) {
@@ -51,6 +51,7 @@ Post.getInitialProps = async function(context) {
 
   // const data = posts[route];
   console.log(data, 'current data');
+  console.log(index);
 
   if(port !== undefined) {
      tmlt = `https://salty-ridge-45524.herokuapp.com/${data.templateUrl}`;
@@ -63,7 +64,6 @@ Post.getInitialProps = async function(context) {
 
   const res4 = await fetch(single)
   const array = await res4.json()
-
 
   return {data, template, array, index};
 }
