@@ -63,7 +63,7 @@ Post.getInitialProps = async function(context) {
   const array = await res4.json()
 
 
-  return {data, templat, array};
+  return {data, template, array};
 }
 
 export default Post;
